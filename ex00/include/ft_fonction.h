@@ -14,7 +14,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int		eval_expr(char *str); // eval_expr.c
+int		eval_expr(char *str); // eval_expr.c bedel liha smiya yaaaa weld l9a7baaaaa
 
 char	*ft_calculate_p(char *str); // ft_calculate.c
 

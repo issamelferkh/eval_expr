@@ -1,28 +1,18 @@
 NAME = eval_expr
 
-SRCS = src/
+SRC = src/*.c
 
-NAME_OBJ =
+OBJ = *.o
 
-INCLUDES = include/
-
-_DEPS = ft_fonction.h
-
-DEPS = $(patsubst %, $(INCLUDES)%, $(_DEPS))
+DEPS = include/ft_fonction.h 
 
 FLAGS = -Wall -Wextra -Werror
 
-_OBJ = ft_fonction.o
-
-OBJ = $(patsubst %, $(NAME_OBJ)%, $(_OBJ))
-
 CC = gcc $(FLAGS)
 
-all: $(_OBJ)
+all:
+	$(CC) -c $(SRC)
 	$(CC) -o $(NAME) $(OBJ)
-
-%.o: $(SRCS)%.c $(DEPS)
-	$(CC) -o $(NAME_OBJ)$@ -c $<
 
 clean:
 	/bin/rm -f $(OBJ)
@@ -31,3 +21,4 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
